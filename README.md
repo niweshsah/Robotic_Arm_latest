@@ -1,10 +1,6 @@
 # Robotic Arm Teleoperation in Gazebo
 This repository provides simulation and teleoperation tools for controlling a robotic arm in Gazebo using keyboard input and ROS controllers.
 
-## Features
-- **Keyboard Control**: Manual control of end-effector velocities.
-- **Velocity Mapping**: Key-based directional velocity control.
-- **Inverse Kinematics**: Joint velocities calculated using the Jacobian inverse.
 
 ## How to use this repo
 ### Prerequisites :
@@ -55,9 +51,8 @@ This repository provides simulation and teleoperation tools for controlling a ro
   rosrun teleop_arm moveit_teleop_niwesh.py
   ```
 
- 
-  - `a` - Move +Y
-  - `d` - Move -Y
-  - `q` - Move +Z
-  - `e` - Move -Z
-
+  ### For finding x,y,z using stereo vision (work under progress):
+  
+  ```
+  rosrun stereo_vision detect_cylinder_xyz.py 
+  ```
