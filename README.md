@@ -40,47 +40,22 @@ This repository provides simulation and teleoperation tools for controlling a ro
 
   ## Control new arm
 
-  ### To start the Gazebo simulation:
+  ### To start the Gazebo simulation with moveit:
   
   ```
-  roslaunch Arm_Urdf new.launch
+  roslaunch arm_moveit_config final_arm_launch.launch 
   ```
+
+> [!NOTE]
+> Rviz may take 2-3 minutes to load but still if planning library is not loaded, then press "reset" at bottom-left of rviz window.
 
   ### To control the robotic arm via keyboard:
   
   ```
-  rosrun Arm_Urdf IK_gazebo.py
+  rosrun teleop_arm moveit_teleop_niwesh.py
   ```
 
-  ### To move arm to a point in space:
-
-  ```
-  rosrun Arm_Urdf IK_set_point_gazebo.py
-  ```
-  ### To move arm to a trajectory of points in space:
-  
-  ```
-  rosrun Arm_Urdf IK_tracking.py
-  ```
-  
-  ## Control old arm
-
-  ### Launch Gazebo
-  To start the Gazebo simulation:
-  
-  ```
-  roslaunch moveit_pkg final.launch
-  ```
-  ### Run Teleoperation
-  To control the robotic arm via keyboard:
-  
-  ```
-  rosrun teleop_arm jaco_pt2.py
-  ```
-
-  ### Keyboard Controls
-  - `w` - Move +X
-  - `s` - Move -X
+ 
   - `a` - Move +Y
   - `d` - Move -Y
   - `q` - Move +Z
